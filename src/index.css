@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .dot-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(26, 26, 26, 0.08) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F2ED;
+  color: #1A1A1A;
+}
+
+h1, h2, h3, h4, .font-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial-title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.spec-list li:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
+.spec-list li:nth-child(odd) {
+  background-color: #EFECE6;
+}
+

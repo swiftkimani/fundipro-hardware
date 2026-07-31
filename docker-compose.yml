@@ -1,0 +1,17 @@
+services:
+  fundipro-hardware:
+    build: .
+    container_name: fundipro-hardware
+    restart: unless-stopped
+    networks:
+      - proxy_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fundipro-hardware.rule=Host(`fundipro.benardkimani.co.ke`)"
+      - "traefik.http.routers.fundipro-hardware.entrypoints=websecure"
+      - "traefik.http.routers.fundipro-hardware.tls.certresolver=myresolver"
+      - "traefik.http.services.fundipro-hardware.loadbalancer.server.port=80"
+
+networks:
+  proxy_network:
+    external: true
